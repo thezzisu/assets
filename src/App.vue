@@ -49,10 +49,8 @@
             <img src="/svg/logo.svg" width="24" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="row items-center">
-              <q-item-label class="text-subtitle1 font-juliamo">
-                ZISU.dev
-              </q-item-label>
+            <q-item-label class="text-subtitle1 font-juliamo">
+              ZISU.dev
             </q-item-label>
           </q-item-section>
         </q-item>
