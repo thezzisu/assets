@@ -1,4 +1,6 @@
 import { Plugin } from 'vite'
+import fetch from 'node-fetch'
+
 export default function markdown(): Plugin {
   return {
     name: 'markdown',
