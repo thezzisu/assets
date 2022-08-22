@@ -18,7 +18,7 @@ This repository contains shared assets for ZISU.dev and other products made by @
 A monospace font made by Microsoft. Upstream: [microsoft/cascadia-code](https://github.com/microsoft/cascadia-code).
 
 ```html
- <link rel="stylesheet" href="https://asset.zisu.dev/css/cascadia.css" />
+<link rel="stylesheet" href="https://asset.zisu.dev/css/cascadia.css" />
 ```
 
 ### Juliamo
