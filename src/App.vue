@@ -1,20 +1,13 @@
 <template>
   <q-layout view="hHh Lpr lff">
     <q-header elevated class="app-header">
-      <q-toolbar class="q-px-none">
-        <q-btn
-          stretch
-          flat
-          icon="mdi-menu"
-          text-color="black"
-          @click="nav = !nav"
-        />
+      <q-toolbar class="q-px-none" :class="{ 'text-dark': !$q.dark.isActive }">
+        <q-btn stretch flat icon="mdi-menu" @click="nav = !nav" />
         <q-btn
           stretch
           flat
           no-caps
           no-wrap
-          text-color="black"
           to="/"
           class="app-logo font-juliamo"
         >
@@ -28,7 +21,6 @@
           stretch
           flat
           icon="mdi-github"
-          text-color="black"
           target="_blank"
           href="https://github.com/thezzisu/assets"
         />
@@ -86,7 +78,11 @@
 </template>
 
 <script setup lang="ts">
+import { useQuasar } from 'quasar'
 import { ref } from 'vue'
+
+const $q = useQuasar()
+$q.dark.set('auto')
 
 const nav = ref<boolean | undefined>(undefined)
 const menu = [{ icon: 'mdi-home', label: 'Home', to: '/' }]
@@ -111,5 +107,14 @@ const menu = [{ icon: 'mdi-home', label: 'Home', to: '/' }]
 .app-nav {
   background: #f2f2f2cc;
   backdrop-filter: blur(10px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .app-header {
+    background-color: #1f2122bf;
+  }
+  .app-nav {
+    background: #1a1717cc;
+  }
 }
 </style>

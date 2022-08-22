@@ -2,6 +2,12 @@
   --app-background: white;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --app-background: black;
+  }
+}
+
 #app {
   background: var(--app-background);
 }
