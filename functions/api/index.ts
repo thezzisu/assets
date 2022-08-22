@@ -1,3 +1,3 @@
-export const onRequest: PagesFunction = async () => {
+export const onRequest: Handler = async () => {
   return new Response('ZISU.dev assets API')
 }
