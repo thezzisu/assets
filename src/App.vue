@@ -19,8 +19,8 @@
           class="app-logo font-juliamo"
         >
           <div class="app-logo_container">
-            <div class="text-h6 app-logo_title">ZISU.dev</div>
-            <div class="app-logo_subtitle">Assets</div>
+            <div class="app-logo_text">ZISU.dev</div>
+            <div class="text-h6 app-logo_text">Assets</div>
           </div>
         </q-btn>
         <q-space />
@@ -102,11 +102,7 @@ const menu = [{ icon: 'mdi-home', label: 'Home', to: '/' }]
   &_container {
     text-align: left;
   }
-  &_title {
-    margin-top: -10px;
-    margin-bottom: -10px;
-  }
-  &_subtitle {
+  &_text {
     margin-top: -10px;
     margin-bottom: -10px;
   }
