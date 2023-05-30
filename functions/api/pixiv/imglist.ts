@@ -4,9 +4,14 @@ export const onRequest: Handler = async ({ request }) => {
   if (!Number.isInteger(pid))
     return new Response('{"error":"pid is required"}', { status: 400 })
 
-  const info: any = await fetch(
-    `https://www.pixiv.net/ajax/illust/${pid}`
-  ).then((req) => req.json())
+  const info: any = await fetch(`https://www.pixiv.net/ajax/illust/${pid}`, {
+    headers: {
+      'User-Agent':
+        request.headers.get('User-Agent') ||
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.100.0',
+      Referer: 'https://www.pixiv.net/'
+    }
+  }).then((req) => req.json())
   const origin = info.body.urls.original
   const ext = origin.split('.').pop()
   const pages = info.body.pageCount
